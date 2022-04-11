@@ -18,6 +18,13 @@ public class EmployeePayRollTest {
         boolean result = entries==2 ? true : false;
         Assertions.assertTrue(result);
     }
+    @Test
+    public void readingFromFileNoOfEntriesShouldMatchActual() {
+        EmployeePayRollService empPayRollService = new EmployeePayRollService();
+        int entries = empPayRollService.readData("File");
+        boolean result = entries == 2 ? true : false;
+        Assertions.assertTrue(result);
+    }
 
 }
 
